@@ -1,0 +1,27 @@
+name: Question
+description: Ask how something works
+labels: [question]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - CVN PSA
+        - CVN-ERP
+        - MSP Backups
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Shown in the product footer or on the About page.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true

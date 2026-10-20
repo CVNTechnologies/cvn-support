@@ -1,0 +1,39 @@
+name: Bug report
+description: Something is not working as expected
+labels: [bug]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - CVN PSA
+        - CVN-ERP
+        - MSP Backups
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Shown in the product footer or on the About page.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Go to ...
+2. Click ...
+3. See the error"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen, and what happened instead?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Do not include license keys, passwords or customer data. License holders can open a private ticket in the account portal.
